@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Café & Gatos </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Baskerville:ital@0;1&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+        scroll-behavior: smooth;
+        }
+        body {
+            background: url('coraline.jpg') no-repeat center / cover;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(4px);
+            background: rgba(15, 25, 50, 0.5);
+            z-index: -1;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #f4f1c9;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+            z-index: 3;
+        }
+
+        nav a {
+            font-family: 'Cinzel', serif;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            text-shadow: 0 0 25px rgba(236, 250, 47, 0.7);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            color: #eaeaea;
+            max-width: 700px;
+        }
+
+        .btn {
+            margin-top: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.8rem 2rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: #1c1c1c;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 100px 10%;
+            background: rgba(255, 255, 255, 0.85);
+            text-align: center;
+        }
+
+        section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            color: #1d1b1b;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            color: #444;
+            line-height: 1.8;
+            max-width: px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .container-conteudo-colunas {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            max-width: 700px;
+            max-height: 600px;
+            margin: 60px auto;
+            gap: 50px;
+            text-align: left;
+        }
+
+        .coluna {
+            flex: 1;
+            padding: 30px;
+            background-color: rgba(250, 250, 250, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+        .coluna h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .coluna p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 350px;
+            height: auto;
+            align-self: center;
+            border-radius: 40px;
+            
+            
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 1rem;
+            color: #fff;
+            background: rgba(15, 25, 50, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="inicio.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="adote.html">Adote</a>
+            <a href="menu.html">Menu</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <h1>Sobre o Café & Gatos</h1>
+        <p>Entre sombras suaves e o aroma de café fresco, nasceu um refúgio para almas que buscam paz, poesia e um toque de surrealismo. Aqui, os gatos são guardiões de sonhos — e o café, uma ponte entre mundos.</p>
+    </header>
+
+    <section>
+        <h2>Um Espaço Onde o Tempo se Desfaz</h2>
+        <p>No Café & Gatos, acreditamos que o surreal não é distante da realidade, ele está nos detalhes. No vapor que dança sobre uma xícara, no olhar sereno de um gato adormecido, nas conversas que ecoam como sussurros antigos. Cada canto foi criado para ser uma pausa do mundo lá fora.</p>
+    </section>
+
+    <div class="container-conteudo-colunas">
+        <div class="coluna">
+            <h3>🐾 Nossa História</h3>
+            <p>Fundado por amantes de felinos e sonhadores, o Café & Gatos nasceu da vontade de unir o aconchego do café com a doçura de oferecer um lar. Gatos resgatados encontram aqui o carinho que merecem, e, quem sabe, uma nova família.</p>
+            <p>Mais que um café, somos um espaço de acolhimento e encanto. Cada xícara servida carrega uma pitada de esperança e um toque de magia.</p>
+        </div>
+
+        <img src="gatinhoresgatado.jpg">
+    </div>
+
+    <div class="container-conteudo-colunas">
+        <img src="gatinhoesquizofre.jpg">
+
+        <div class="coluna">
+            <h3>☕ A Experiência</h3>
+            <p>Enquanto saboreia um latte artesanal ou um bolo de especiarias, os visitantes compartilham o espaço com nossos anfitriões de quatro patas. Eles vagueiam entre as mesas, trazendo conforto e um charme indescritível.</p>
+            <p>É um convite para desacelerar, respirar e deixar-se envolver pela atmosfera onírica que habita cada canto deste lugar.</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>Venha Sonhar Conosco</h2>
+        <p>Entre um gole e um ronronar, o tempo se dissolve. Nosso café é um portal, e cada visita, uma nova história. Traga seu coração aberto e deixe que nossos gatos guiem seu caminho.</p>
+    </section>
+
+    <footer>
+        © 2025 Café & Gatos Surreal, Onde o café encontra os sonhos.
+    </footer>
+</body>
+</html>
