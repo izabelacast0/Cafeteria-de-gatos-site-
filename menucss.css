@@ -43,7 +43,7 @@ header {
     text-align: left;
     padding: 0 5%;
     flex-direction: row;
-    color: #faf738cf;
+    color: #ffffff;
     overflow: hidden;
     
 }
@@ -70,7 +70,7 @@ h1 {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
     letter-spacing: 2px;
-    text-shadow: 0 0 20px rgba(236, 250, 47, 0.763);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.61);
 }
 .fog {
     position: absolute;
@@ -199,7 +199,7 @@ section p {
 .coluna-texto-destaque h3 {
     font-family: 'Cinzel', serif;
     font-size: 8rem;
-    color: #a89461;
+    color: #cab276;
     margin-bottom: 10px;
 }
 
@@ -285,4 +285,3 @@ footer {
         max-width: 350px;
     }
 }
-
