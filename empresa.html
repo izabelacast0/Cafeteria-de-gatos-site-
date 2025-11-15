@@ -41,26 +41,31 @@
             backdrop-filter: blur(3px);
         }
         
-        nav {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 30px;
-            z-index: 999;
-            background-color: #00000049;
-            border-radius: 80px;
-        }
-
         nav a {
-            font-family: 'Cinzel', serif;
-            color: #fff;
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: opacity 0.3s;
-            
-        }
+      font-family: 'Cinzel', serif;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition:color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #392e2b;
+    }
+.menufix{
+      position: fixed;
+      align-items: center;
+      background: rgba(255,255,255,0.2); 
+      backdrop-filter: blur(5px);
+      width: 100%;
+      top:-23px;
+      padding-top: 15px;
+      padding-bottom: 10px;
+      z-index:99;
+      justify-content: center;
+      margin-top: 20px;
+      border-bottom: 1px solid #fff;
+    }
 
         nav a:hover {
             opacity: 0.7;
@@ -185,8 +190,7 @@
 </head>
 
 <body>
-
-    <nav>
+    <nav class="menufix">
         <a href="inicial.html">Início</a>
         <a href="empresa.html">Sobre</a>
         <a href="adote.html">Adote</a>
@@ -240,4 +244,5 @@
 
 </body>
 </html>
+
 
