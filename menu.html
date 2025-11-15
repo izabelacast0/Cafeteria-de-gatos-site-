@@ -14,6 +14,7 @@
     margin: 0;
     padding:0;
     box-sizing:border-box;
+    
 }
 
 body {
@@ -21,6 +22,7 @@ body {
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
+    
 }
 
 body::before {
@@ -30,7 +32,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(4px); 
+    backdrop-filter: blur(10px); 
     background: rgba(10, 20, 60, 0.4); 
     z-index: -1; 
 }
@@ -62,9 +64,9 @@ header::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 30%, rgba(70, 56, 56, 0.2), rgba(0,0,0,0.7));
     mix-blend-mode: soft-light;
     z-index: 1;
+    
 }
 
 .header-coluna-texto {
@@ -81,16 +83,7 @@ h1 {
     letter-spacing: 2px;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.61);
 }
-.fog {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(81, 96, 127, 0.113); 
-    backdrop-filter: blur(10px);
-    z-index: 0;
-}
+
 header p {
     z-index: 2;
     font-size: 1.4rem;
@@ -121,14 +114,19 @@ header p {
 }
 
 nav {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 30px;
-    z-index: 3;
+    z-index: 9999;
+    background-color: #00000057; 
+    border-radius: 80px;
+    padding: 15px 40px; 
+    max-width: 600px;
 }
+
 
 nav a {
     font-family: 'Cinzel', serif;
@@ -183,7 +181,17 @@ section p {
     
 }
 
-
+.colunaprincipal {
+    padding: 60px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.711);
+            text-align: center;
+            line-height: 1.8;
+            backdrop-filter: blur(3px);
+            width: 90%;
+            height: 90%;
+            margin:10px auto;
+}
 .coluna {
     flex: 1;
     padding: 20px;
@@ -262,44 +270,12 @@ footer {
       font-size: 0.9rem;
       color: #ededed;
       background-color: #392e2b;
+      margin-top: 50px;
     }
-
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding-top: 100px;
-        padding-bottom: 50px;
-        
-    }
-     img {
-        position: static;
-        margin: 20px auto;
-        display: block;
-    }
-
-    .header-coluna-texto {
-        max-width: 100%;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .container-conteudo-colunas {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container-conteudo-colunas img {
-        width: 80%;
-        max-width: 350px;
-    }
-}   
     </style>
     </head>
 <body>
     <header>
-        <div class="fog"></div>
-        
         <nav>
             <a href="inicial.html">Início</a>
             <a href="empresa.html">Sobre</a>
@@ -319,7 +295,8 @@ footer {
         </div>
         </header>
         <br> <br>
-        <h1 style="color: whitesmoke; text-align:center; font-size: 50px;">Cardápio e Adoção: Nosso Universo</h1>
+        <div class="colunaprincipal">
+        <h1 style="color: rgba(74, 74, 74, 0.897); text-align:center; font-size: 50px;text-shadow: 0 0 20px rgba(23, 20, 20, 0.675);">Cardápio e Adoção: Nosso Universo</h1>
 
         <div class="container-conteudo-colunas">
             
@@ -350,8 +327,6 @@ footer {
                 <img src="picturecat2.png" alt="">
             </div>
 
-        </div>
-
         <br>
 
         <div class="container-conteudo-colunas">
@@ -367,13 +342,10 @@ footer {
             </div>
 
         </div>
-
     
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Um espaço onde o tempo desacelera, o café é arte e cada gato é uma história esperando um novo lar. Inspirados pela estética surrealista, criamos um refúgio para almas gentis e amantes de felinos.</p>
-    </section>
-
+    
+    
+        </div>
     <footer>
         © 2025 Café e Gatos — Adote. Aprecie. Ame.
     </footer>
