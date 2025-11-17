@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="cafeteria, gatos, adoção">
+  <meta name="author" content="Isabela Martins, Geovana Gama, Maria Gabrielly, Izabela Castro">
+  <meta name="description" content="Café & Gatos — um espaço artístico onde o aroma do café encontra o aconchego dos felinos. Conheça, adote e sonhe.">
+  <meta name="reply-to" content="contato@cafeegatos.com.br">
+  <title>Adote | Café & Gatos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Baskerville:ital@0;1&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Libre Baskerville', serif;
+      background: linear-gradient(to bottom right, #f3ede4, #e0dcd5);
+      color: #1c1c1c;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 50vh;
+      background: url("15697235005d90146c3a76f_1569723500_3x2_md.jpg") center/cover no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.2), rgba(0,0,0,0.7));
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      z-index: 1;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    p.sub {
+      z-index: 1;
+      font-size: 1.2rem;
+      color: #f3f3f3;
+      opacity: 0.9;
+      margin-top: 1rem;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+      z-index: 2;
+    }
+
+    nav a {
+      font-family: 'Cinzel', serif;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition:color 0.4s ease;
+    }
+
+    nav a:hover {
+      color: #392e2b;
+      text-shadow: 0 2px 8px rgba(32, 24, 24, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .container {
+      padding: 80px 10%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .gato-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .gato-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+   .gato-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* mostra a imagem inteira */
+    object-position: center; /* centraliza */
+    background-color: #fff; /* cor neutra de fundo */
+    padding: 10px; /* espaço interno pra não colar na borda */
+}
+
+
+    .gato-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      margin-top: 15px;
+      color: #000;
+    }
+
+    .gato-card p {
+      font-size: 0.95rem;
+      color: #000;
+      padding: 0 15px 20px 15px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #ededed;
+      background-color: #392e2b;
+    }
+    
+     .adocao-info {
+      text-align: center;
+      padding: 80px 15%;
+      background: rgba(255,255,255,0.3);
+      border-top: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      backdrop-filter: blur(8px);
+    }
+     .adocao-info h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .adocao-info p {
+      font-size: 1rem;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+     .btn {
+      background: rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.2);
+      padding: 0.8rem 2rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: #1c1c1c;
+      letter-spacing: 1px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: rgba(0,0,0,0.15);
+    }
+
+    .menufix{
+      position: fixed;
+      align-items: center;
+      background: rgba(255,255,255,0.2); 
+      backdrop-filter: blur(5px);
+      width: 100%;
+      top:-23px;
+      padding-top: 28px;
+      padding-bottom: 10px;
+      z-index:99;
+      justify-content: center;
+      margin-top: 20px;
+      border-bottom: 1px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="menufix">
+      <a href="inicial.html">Início</a>
+      <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/empresa.html">Sobre</a>
+      <a href="adote.html">Adote</a>
+      <a href="menu.html">Menu</a>
+      <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/sobrenos.html">Quem somos</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <h1>Adote um Gato</h1>
+    <p class="sub">Aprenda novas maneiras de amar.</p>
+  </header>
+
+  <section class="container">
+    <div class="gato-card">
+      <img src="../imgs/cakematcha.png" alt="Cake Matcha">
+      <h3>Luna</h3>
+      <p>Curiosa e silenciosa, gosta de observar a chuva pela janela. Adora colo e jazz suave.</p>
+    </div>
+    <div class="gato-card">
+      <img src="gatinho2.jpg" alt="Oscar">
+      <h3>Oscar</h3>
+      <p>Misterioso, elegante e solitário. Passa as tardes observando o reflexo do próprio olhar nas vitrines do café.</p>
+    </div>
+    <div class="gato-card">
+      <img src="gatinho3.jpg" alt="Cleo">
+      <h3>Cleo</h3>
+      <p>Tem olhos que lembram constelações. Gosta de sentar no balcão e observar o mundo.</p>
+    </div>
+    <div class="gato-card">
+      <img src="gatinho4.jpg" alt="Haru">
+      <h3>Haru</h3>
+      <p>Vindo de um abrigo distante, encontrou no aroma de café um novo começo.</p>
+    </div>
+    <div class="gato-card">
+      <img src="gatinho5.jpg" alt="Milo">
+      <h3>Milo</h3>
+      <p>Brincalhão e preguiçoso na medida certa. Sempre acha um solzinho para dormir.</p>
+    </div>
+    <div class="gato-card">
+      <img src="gatinho6.jpg" alt="Isis">
+      <h3>Isis</h3>
+      <p>Selvagem e curiosa, parece vinda de outro mundo — onde os sonhos têm cheiro de café e liberdade.</p>
+    </div>
+  </section>
+  <section class="adocao-info">
+    <h2>Como Adotar</h2>
+    <p>Adotar é mais do que abrir a porta de casa — é abrir o coração.  
+    Todos os nossos gatos vêm de abrigos parceiros e recebem cuidados, carinho e muito descanso antes de encontrarem um novo lar.  
+    Para adotar, basta entrar em contato conosco e preencher um breve formulário de adoção responsável.</p>
+    <a href="contato.html" class="btn">Entrar em Contato e Ler Políticas</a>
+  </section>
+
+  <footer>
+    © 2025 Café & Gatos — Adote um gatinho.
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
