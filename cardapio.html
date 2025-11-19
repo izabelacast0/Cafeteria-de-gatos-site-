@@ -209,6 +209,41 @@
       margin-top: 20px;
       border-bottom: 1px solid #fff;
     }
+    .galeria{
+        justify-content: center;
+        display: flex;
+    }
+    .galeria img{
+        width: 250px;
+        height: 250px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+    figcaption{
+        margin-left: 35px !important;
+    }
+    figcaption a{
+        position: relative;
+        text-decoration: none;
+        color: #3d5e4f;
+        font-family: 'Cinzel', serif;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    figcaption a::after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 3px;
+        left: 0;
+        bottom: -1px;
+        background-color:#3d5e4f;
+        transition: width 0.3s ease;
+    }
+
+    figcaption a:hover::after{
+        width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -224,7 +259,24 @@
     <h1>Cardápio</h1>
     <p class="sub">Conheça sabores que abraçam.</p>
   </header>
-
+  <div class="galeria">
+    <figure>
+    <img src="../imgs/w1.png" alt="w1">
+    <figcaption><a href="bebidas.html">Bebidas</a></figcaption>
+    </figure>
+    <figure>
+    <img src="../imgs/w3.png" alt="w1">
+    <figcaption><a href="bebidas.html">Bolos</a></figcaption>
+    </figure>
+    <figure>
+    <img src="../imgs/w2.png" alt="w1">
+    <figcaption><a href="bebidas.html"></a></figcaption>
+    </figure>
+    <figure>
+    <img src="../imgs/w4.png" alt="w1">
+    <figcaption><a href="bebidas.html">para gatos</a></figcaption>
+    </figure>
+  </div>
   <section class="container">
     <div class="gato-card">
       <img src="cakematcha.png" alt="Cake Matcha">
