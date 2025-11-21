@@ -4,143 +4,167 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre a Empresa</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Space+Grotesk:wght@300;500&display=swap');
 
     body {
       margin: 0;
       padding: 0;
-      background-color: #f4f1ec;
-      color: #2a2a2a;
-      font-family: 'Space Grotesk', sans-serif;
       background-image: url('green1.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      backdrop-filter: blur(3px); 
+      font-family: 'Space Grotesk', sans-serif;
+      color: #2a2a2a;
+    }
+    nav.menufix {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 22px 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.6);
+      z-index: 99;
+    }
+
+    nav.menufix a {
+      font-family: 'Playfair Display', serif;
+      margin: 0 25px;
+      text-decoration: none;
+      font-size: 1.05rem;
+      letter-spacing: 2px;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav.menufix a:hover {
+      color: #e4e4e4;
     }
     header {
+      height: 65vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       text-align: center;
-      padding: 3rem 1rem;
-      background: rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(10px);
+      color: white;
+      position: relative;
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      letter-spacing: 2px;
-      color: #2a2a2a;
-      margin: 0;
+      font-size: 3.8rem;
+      letter-spacing: 4px;
+      color: #ffffff; 
+      margin-top: 80px;
     }
-
     main {
-      max-width: 800px;
+      max-width: 850px;
       margin: 4rem auto;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.72);
       padding: 3rem;
-      border-radius: 20px;
+      border-radius: 22px;
       backdrop-filter: blur(8px);
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
       text-align: justify;
-      font-size: 1.05rem;
       line-height: 1.8;
+      font-size: 1.07rem;
     }
 
     main h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
       text-align: center;
+      font-size: 2.2rem;
       margin-bottom: 1.5rem;
     }
-    <!--frase em descate-->
+
     .quote {
       font-style: italic;
+      font-family: 'Playfair Display', serif;
       text-align: center;
       margin: 2rem 0;
-      font-family: 'Playfair Display', serif;
       color: #444;
     }
-
     .maria-sessao {
       margin: 4rem 0;
-      background: rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(10px);
-      border-radius: 25px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
+      background: rgba(255, 255, 255, 0.45);
       padding: 2rem;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
     }
 
     .maria-foto {
       width: 250px;
       height: 250px;
-      background-color: rgba(255, 255, 255, 0.6);
       border-radius: 50%;
-      background-position: center;
-      background-size: cover;
-      margin-bottom: 1.5rem;
       background-image: url('maria.jpg');
-    }
-
-    .maria-texto {
-      text-align: center;
-      max-width: 600px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1.3rem;
+      border: 4px solid rgba(255,255,255,0.7);
     }
 
     .maria-texto h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: .4rem;
     }
-
-    .maria-texto p {
-      font-size: 1rem;
-      color: #333;
-      font-style: italic;
-    }
-
     footer {
+      background: #4f3a29;
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
-      color: #444;
-    }
-   <!--links-->
-    a {
-      color: #2a2a2a;
-      text-decoration: none;
-      border-bottom: 1px solid #2a2a2a;
-      transition: 0.3s;
+      font-size: 0.95rem;
+      color: #f1e8dc;
+      margin-top: 4rem;
+      letter-spacing: 1px;
     }
 
-    a:hover {
-      color: #000;
-      border-bottom-color: #000;
+    footer a {
+      color: #f1e8dc;
+      border-bottom: none;
     }
   </style>
 </head>
+
 <body>
 
+  <nav class="menufix">
+    <a href="inicial.html">Início</a>
+    <a href="empresa.html">Sobre</a>
+    <a href="adote.html">Adote</a>
+    <a href="menu.html">Menu</a>
+    <a href="sobrenos.html">Quem somos</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
   <header>
-    <h1>Sobre a empresa</h1>
+    <h1>Sobre a Empresa</h1>
   </header>
 
   <main>
     <h2>Um Refúgio para Almas Felinas</h2>
+
     <p>
-      Fundada por artistas que acreditam que cada gato é uma obra de arte inacabada, a <strong>Café e Gatos</strong> nasceu em um porão iluminado por lâmpadas frias, entre pincéis, filmes antigos e o som distante de miados.
+      Fundada por artistas que acreditam que cada gato é uma obra de arte inacabada, a
+      <strong>Café e Gatos</strong> nasceu em um porão iluminado por lâmpadas frias, entre pincéis, filmes antigos
+      e o som distante de miados.
     </p>
 
     <p>
-      A empresa começou como uma instalação artística — um espaço onde gatos e humanos compartilhavam o mesmo silêncio, observando-se como se tentassem entender a própria solidão. Com o tempo, o projeto cresceu e tornou-se um abrigo, mas manteve sua alma estranha e poética.
+      A empresa começou como uma instalação artística — um espaço onde gatos e humanos observavam-se em silêncio,
+      tentando decifrar a própria solidão. Com o tempo, o projeto cresceu e tornou-se um abrigo, sem perder sua
+      natureza estranha e poética.
     </p>
 
     <p>
-      Nosso propósito é simples: conectar seres que buscam companhia, não por necessidade, mas por afinidade. Cada adoção é uma performance silenciosa, um pacto entre olhares.
+      Nosso propósito é simples: aproximar seres que buscam companhia, não por necessidade, mas por afinidade.
+      Cada adoção é uma performance silenciosa — um pacto de olhares.
     </p>
 
     <div class="quote">“Todo gato é uma lembrança de que o mistério ainda existe.”</div>
@@ -150,26 +174,26 @@
       <div class="maria-texto">
         <h3>Maria & Bill</h3>
         <p>
-          Maria foi a primeira cuidadora de seu gato. Dizem que foi Bill, seu gato de olhos desiguais, quem escolheu o nome da empresa.  
-         
+          Maria foi a primeira cuidadora do gato Bill — e dizem que foi ele, com seus olhos desiguais,
+          quem escolheu o nome da empresa.
+        </p>
       </div>
     </div>
 
     <p>
-      Hoje, continuamos a operar com o mesmo espírito: entre o experimental e o afetivo. Não acreditamos em donos, mas em cúmplices. E acreditamos que cada felino que passa por nós deixa um vestígio — uma pequena história que se mistura às nossas.
+      Hoje seguimos com o mesmo espírito: entre o experimental e o afetivo.
+      Não acreditamos em donos — acreditamos em cúmplices.
     </p>
 
     <p>
-      Se quiser conhecer mais sobre nossos projetos ou participar, visite a seção <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/contato.html">Contatos</a> ou volte à <a href="index.html">página principal</a>.
+      Para saber mais ou participar, visite a seção <a href="contato.html">Contatos</a>
+      ou volte à <a href="inicial.html">página principal</a>.
     </p>
   </main>
 
   <footer>
-    <p>© 2025 Café e Gato — Onde o estranho encontra abrigo.</p>
+    © 2025 Café e Gato — Onde o estranho encontra abrigo.
   </footer>
 
 </body>
 </html>
-
-
-
