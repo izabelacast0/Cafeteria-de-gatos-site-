@@ -1,218 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="keywords" content="cafeteria, gatos, adoção">
-    <meta name="author" content="Isabela Martins, Geovana Gama, Maria Gabrielly, Izabela Castro">
-    <meta name="description" content="Miaulatte™ — um espaço artístico onde o aroma do café encontra o aconchego dos felinos. Conheça, adote e sonhe.">
-    <meta name="reply-to" content="contato@miaulatte.com.br">
-    <title>Sobre a Empresa | Miaulatte™ </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre a Empresa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Space+Grotesk:wght@300;500&display=swap');
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Baskerville:ital@0;1&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: url('green1.jpg') no-repeat center/cover;
-            transition: background 1s ease, color 0.8s ease;
-            overflow-x: hidden;
-            font-family: 'Libre Baskerville', serif;
-            color: #2a2a2a;
-            
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            width: 100%;
-            height: 100%; 
-            z-index: -1;
-            backdrop-filter: blur(3px);
-        }
-        nav {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 30px;
-            z-index: 2;
-            }
-        nav a {
-      font-family: 'Cinzel', serif;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: 1px;
-      transition:color 0.3s ease;
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f1ec;
+      color: #2a2a2a;
+      font-family: 'Space Grotesk', sans-serif;
+      background-image: url('green1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      backdrop-filter: blur(3px); 
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
     }
 
-    nav a:hover {
-      color: #392e2b;
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      color: #2a2a2a;
+      margin: 0;
     }
-.menufix{
-      position: fixed;
+
+    main {
+      max-width: 800px;
+      margin: 4rem auto;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 3rem;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+      text-align: justify;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    main h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    <!--frase em descate-->
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin: 2rem 0;
+      font-family: 'Playfair Display', serif;
+      color: #444;
+    }
+
+    .maria-sessao {
+      margin: 4rem 0;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      overflow: hidden;
+      display: flex;
       align-items: center;
-      background: rgba(255,255,255,0.2); 
-      backdrop-filter: blur(15px);
-      width: 100%;
-      top:-23px;
-      padding-top: 28px;
-      padding-bottom: 10px;
-      z-index:99;
-      justify-content: center;
-      margin-top: 20px;
-      border-bottom: 1px solid #fff;
-    }
-        header {
-            height: 80vh;
-            background: url('brownheader.jpg') center/cover no-repeat;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #f4f1d0;
-            padding: 0 2rem;
-            backdrop-filter: blur(3px);
-            overflow: hidden;
-            transition: background 1s ease;
-            
-        }
-
-        header::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            mix-blend-mode: soft-light;
-            backdrop-filter: blur(3px);
-            transition: all 1s ease;
-        }
-
-        header h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 4rem;
-            position: relative;
-            z-index: 2;
-            text-shadow: 0 0 25px rgba(255, 255, 255, 0.76);
-        }
-
-        header p {
-            font-size: 1.4rem;
-            max-width: 700px;
-            color: #eee;
-            margin-top: 1.5rem;
-            position: relative;
-            z-index: 2;
-        }
-        section, main {
-            padding: 60px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.711);
-            text-align: center;
-            line-height: 1.8;
-            backdrop-filter: blur(3px);
-            width: 60%;
-            height: 90%;
-            margin:10px auto;
-            
-        }
-
-        main h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.7rem;
-            margin-bottom: 30px;
-            color: #1d1b1b;
-            
-        }
-
-        main p {
-            font-size: 1.2rem;
-            color: #191919;
-            margin-bottom: 20px;
-            max-width: 900px;
-            margin-inline: auto;
-            text-align: justify;
-        }
-
-        .perfil-sessao {
-            margin: 70px auto;
-            padding: 40px;
-            max-width: 700px;
-            background: rgba(255, 255, 255, 0.701);
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            text-align: center;
-            
-        }
-
-        .perfil-foto {
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            background: url('maria.jpg') center/cover no-repeat;
-            margin: 0 auto 20px auto;
-        }
-
-        .perfil-texto h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 2rem;
-        }
-
-        .perfil-texto p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-top: 10px;
-        }
-        main a {
-          color: rgb(68, 19, 5);
-          text-decoration: none;
-        }
-
-        footer {
-        text-align: center;
-        padding: 40px;
-        margin-top: 50px;
-        font-size: 0.9rem;
-        color: #ededed;
-        background-color: #392e2b;
-      
+      flex-direction: column;
+      padding: 2rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     }
 
-    </style>
+    .maria-foto {
+      width: 250px;
+      height: 250px;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 1.5rem;
+      background-image: url('maria.jpg');
+    }
+
+    .maria-texto {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .maria-texto h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .maria-texto p {
+      font-size: 1rem;
+      color: #333;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+   <!--links-->
+    a {
+      color: #2a2a2a;
+      text-decoration: none;
+      border-bottom: 1px solid #2a2a2a;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #000;
+      border-bottom-color: #000;
+    }
+  </style>
 </head>
-
 <body>
-    <nav class="menufix">
-        <a href="inicial.html">Início</a>
-        <a href="empresa.html">Sobre</a>
-        <a href="adote.html">Adote</a>
-        <a href="menu.html">Menu</a>
-        <a href="sobrenos.html">Quem somos</a>
-        <a href="contato.html">Contato</a>
-    </nav>
 
-    <header>
-        <h1>Sobre a Empresa</h1>
-        <p>Onde o aroma do café encontra o aconchego dos felinos.</p>
-    </header>
+  <header>
+    <h1>Sobre a empresa</h1>
+  </header>
 
-    <main>
-        <h2>Um Refúgio para Almas Felinas</h2>
-
-        <p>
-      Fundada por artistas que acreditam que cada gato é uma obra de arte inacabada, a <strong>Miaulatte™</strong> nasceu em um porão iluminado por lâmpadas frias, entre pincéis, filmes antigos e o som distante de miados.
+  <main>
+    <h2>Um Refúgio para Almas Felinas</h2>
+    <p>
+      Fundada por artistas que acreditam que cada gato é uma obra de arte inacabada, a <strong>Café e Gatos</strong> nasceu em um porão iluminado por lâmpadas frias, entre pincéis, filmes antigos e o som distante de miados.
     </p>
 
     <p>
@@ -223,13 +143,15 @@
       Nosso propósito é simples: conectar seres que buscam companhia, não por necessidade, mas por afinidade. Cada adoção é uma performance silenciosa, um pacto entre olhares.
     </p>
 
+    <div class="quote">“Todo gato é uma lembrança de que o mistério ainda existe.”</div>
 
-        <div class="perfil-sessao">
-            <div class="perfil-foto"></div>
-            <div class="perfil-texto">
-                <h3>Maria & Bill</h3>
-                <p>
+    <div class="maria-sessao">
+      <div class="maria-foto"></div>
+      <div class="maria-texto">
+        <h3>Maria & Bill</h3>
+        <p>
           Maria foi a primeira cuidadora de seu gato. Dizem que foi Bill, seu gato de olhos desiguais, quem escolheu o nome da empresa.  
+         
       </div>
     </div>
 
@@ -238,20 +160,16 @@
     </p>
 
     <p>
-      Se quiser conhecer mais sobre nossos projetos ou participar, visite a seção <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/contato.html">Contatos</a> ou volte à <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/inicial.html">página principal</a>.
+      Se quiser conhecer mais sobre nossos projetos ou participar, visite a seção <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/contato.html">Contatos</a> ou volte à <a href="index.html">página principal</a>.
     </p>
-    </main>
+  </main>
 
-    <footer>
-        © 2025 Miaulatte™ — Onde o estranho encontra abrigo.
-    </footer>
+  <footer>
+    <p>© 2025 Café e Gato — Onde o estranho encontra abrigo.</p>
+  </footer>
 
 </body>
 </html>
-
-
-
-
 
 
 
