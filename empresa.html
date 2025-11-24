@@ -1,199 +1,252 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre a Empresa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="keywords" content="cafeteria, gatos, adoção">
+    <meta name="author" content="Isabela Martins, Geovana Gama, Maria Gabrielly, Izabela Castro">
+    <meta name="description" content="Café & Gatos — um espaço artístico onde o aroma do café encontra o aconchego dos felinos. Conheça, adote e sonhe.">
+    <meta name="reply-to" content="contato@cafeegatos.com.br">
+    <title>Sobre a Empresa | Café & Gatos </title>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Space+Grotesk:wght@300;500&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Baskerville:ital@0;1&display=swap');
 
-    body {
-      margin: 0;
-      padding: 0;
-      background-image: url('green1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: 'Space Grotesk', sans-serif;
-      color: #2a2a2a;
-    }
-    nav.menufix {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 22px 0;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.10);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(255,255,255,0.6);
-      z-index: 99;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    nav.menufix a {
-      font-family: 'Playfair Display', serif;
-      margin: 0 25px;
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: url('green1.jpg') no-repeat center/cover;
+            transition: background 1s ease, color 0.8s ease;
+            overflow-x: hidden;
+            font-family: 'Libre Baskerville', serif;
+            color: #2a2a2a;
+            
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%; 
+            z-index: -1;
+            backdrop-filter: blur(4px);
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+            z-index: 2;
+            }
+        nav a {
+      font-family: 'Cinzel', serif;
+      color: #ffffff;
       text-decoration: none;
-      font-size: 1.05rem;
-      letter-spacing: 2px;
-      color: white;
-      transition: 0.3s;
-    }
-
-    nav.menufix a:hover {
-      color: #e4e4e4;
-    }
-    header {
-      height: 65vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
-      letter-spacing: 4px;
-      color: #ffffff; 
-      margin-top: 80px;
-    }
-    main {
-      max-width: 850px;
-      margin: 4rem auto;
-      background: rgba(255, 255, 255, 0.72);
-      padding: 3rem;
-      border-radius: 22px;
-      backdrop-filter: blur(8px);
-      text-align: justify;
-      line-height: 1.8;
-      font-size: 1.07rem;
-    }
-
-    main h2 {
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .quote {
-      font-style: italic;
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      margin: 2rem 0;
-      color: #444;
-    }
-    .maria-sessao {
-      margin: 4rem 0;
-      background: rgba(255, 255, 255, 0.45);
-      padding: 2rem;
-      border-radius: 25px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-
-    .maria-foto {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      background-image: url('maria.jpg');
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 1.3rem;
-      border: 4px solid rgba(255,255,255,0.7);
-    }
-
-    .maria-texto h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin-bottom: .4rem;
-    }
-    footer {
-      background: #4f3a29;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.95rem;
-      color: #f1e8dc;
-      margin-top: 4rem;
       letter-spacing: 1px;
+      transition:color 0.3s ease;
     }
 
-    footer a {
-      color: #f1e8dc;
-      border-bottom: none;
+    nav a:hover {
+      color: #392e2b;
     }
-  </style>
+.menufix{
+      position: fixed;
+      align-items: center;
+      background: rgba(255,255,255,0.2); 
+      backdrop-filter: blur(15px);
+      width: 100%;
+      top:-23px;
+      padding-top: 28px;
+      padding-bottom: 10px;
+      z-index:99;
+      justify-content: center;
+      margin-top: 20px;
+      border-bottom: 1px solid #fff;
+    }
+        header {
+            height: 80vh;
+            background: url('brownheader.jpg') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #f4f1d0;
+            padding: 0 2rem;
+            backdrop-filter: blur(3px);
+            overflow: hidden;
+            transition: background 1s ease;
+            
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            mix-blend-mode: soft-light;
+            backdrop-filter: blur(3px);
+            transition: all 1s ease;
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.76);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            color: #eee;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        section, main {
+            padding: 60px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.711);
+            text-align: center;
+            line-height: 1.8;
+            backdrop-filter: blur(3px);
+            width: 60%;
+            height: 90%;
+            margin:10px auto;
+            
+        }
+
+        main h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.6rem;
+            margin-bottom: 30px;
+            color: #1d1b1b;
+            
+        }
+
+        main p {
+            font-size: 1.2rem;
+            color: #191919;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-inline: auto;
+            text-align: justify;
+        }
+
+        .perfil-sessao {
+            margin: 70px auto;
+            padding: 40px;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.701);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            
+        }
+
+        .perfil-foto {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: url('maria.jpg') center/cover no-repeat;
+            margin: 0 auto 20px auto;
+        }
+
+        .perfil-texto h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+        }
+
+        .perfil-texto p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 10px;
+        }
+        main a {
+          color: rgb(59, 60, 59);
+          text-decoration: rgb(15, 15, 15) underline;;
+        }
+
+        footer {
+      background: #392e2b;
+      color: #ededed;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+
+    </style>
 </head>
 
 <body>
+    <nav class="menufix">
+        <a href="inicial.html">Início</a>
+        <a href="empresa.html">Sobre</a>
+        <a href="adote.html">Adote</a>
+        <a href="menu.html">Menu</a>
+        <a href="sobrenos.html">Quem somos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
 
-  <nav class="menufix">
-    <a href="inicial.html">Início</a>
-    <a href="empresa.html">Sobre</a>
-    <a href="adote.html">Adote</a>
-    <a href="menu.html">Menu</a>
-    <a href="sobrenos.html">Quem somos</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+    <header>
+        <h1>Sobre a Empresa</h1>
+        <p>Onde o aroma do café encontra o aconchego dos felinos.</p>
+    </header>
 
-  <header>
-    <h1>Sobre a Empresa</h1>
-  </header>
+    <main>
+        <h2>Um Refúgio para Almas Felinas</h2>
 
-  <main>
-    <h2>Um Refúgio para Almas Felinas</h2>
-
-    <p>
-      Fundada por artistas que acreditam que cada gato é uma obra de arte inacabada, a
-      <strong>Café e Gatos</strong> nasceu em um porão iluminado por lâmpadas frias, entre pincéis, filmes antigos
-      e o som distante de miados.
-    </p>
-
-    <p>
-      A empresa começou como uma instalação artística — um espaço onde gatos e humanos observavam-se em silêncio,
-      tentando decifrar a própria solidão. Com o tempo, o projeto cresceu e tornou-se um abrigo, sem perder sua
-      natureza estranha e poética.
-    </p>
-
-    <p>
-      Nosso propósito é simples: aproximar seres que buscam companhia, não por necessidade, mas por afinidade.
-      Cada adoção é uma performance silenciosa — um pacto de olhares.
-    </p>
-
-    <div class="quote">“Todo gato é uma lembrança de que o mistério ainda existe.”</div>
-
-    <div class="maria-sessao">
-      <div class="maria-foto"></div>
-      <div class="maria-texto">
-        <h3>Maria & Bill</h3>
         <p>
-          Maria foi a primeira cuidadora do gato Bill — e dizem que foi ele, com seus olhos desiguais,
-          quem escolheu o nome da empresa.
-        </p>
+      Fundada por artistas que acreditam que cada gato é uma obra de arte inacabada, a <strong>Café e Gatos</strong> nasceu em um porão iluminado por lâmpadas frias, entre pincéis, filmes antigos e o som distante de miados.
+    </p>
+
+    <p>
+      A empresa começou como uma instalação artística — um espaço onde gatos e humanos compartilhavam o mesmo silêncio, observando-se como se tentassem entender a própria solidão. Com o tempo, o projeto cresceu e tornou-se um abrigo, mas manteve sua alma estranha e poética.
+    </p>
+
+    <p>
+      Nosso propósito é simples: conectar seres que buscam companhia, não por necessidade, mas por afinidade. Cada adoção é uma performance silenciosa, um pacto entre olhares.
+    </p>
+
+
+        <div class="perfil-sessao">
+            <div class="perfil-foto"></div>
+            <div class="perfil-texto">
+                <h3>Maria & Bill</h3>
+                <p>
+          Maria foi a primeira cuidadora de seu gato. Dizem que foi Bill, seu gato de olhos desiguais, quem escolheu o nome da empresa.  
       </div>
     </div>
 
     <p>
-      Hoje seguimos com o mesmo espírito: entre o experimental e o afetivo.
-      Não acreditamos em donos — acreditamos em cúmplices.
+      Hoje, continuamos a operar com o mesmo espírito: entre o experimental e o afetivo. Não acreditamos em donos, mas em cúmplices. E acreditamos que cada felino que passa por nós deixa um vestígio — uma pequena história que se mistura às nossas.
     </p>
 
     <p>
-      Para saber mais ou participar, visite a seção <a href="contato.html">Contatos</a>
-      ou volte à <a href="inicial.html">página principal</a>.
+      Se quiser conhecer mais sobre nossos projetos ou participar, visite a seção <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/contato.html">Contatos</a> ou volte à <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/inicial.html">página principal</a>.
     </p>
-  </main>
-
-  <footer>
-    © 2025 Café e Gato — Onde o estranho encontra abrigo.
-  </footer>
+    </main>
+    <br> <br>
+    <footer>
+        © 2025 Miaulatte™ — Adote. Aprecie. Ame.
+    </footer>
 
 </body>
 </html>
+
+
+
