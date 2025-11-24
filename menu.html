@@ -16,7 +16,9 @@
     box-sizing:border-box;
     
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
     background: url('melior2.jpg') no-repeat center /cover;
     position: relative;
@@ -265,7 +267,6 @@ section p {
     transition: background 0.3s;
     text-align: center;
     font-size: 19px;
-
 }
 
 .coluna .btn-adotar:hover {
@@ -282,7 +283,9 @@ footer {
     a{
     text-decoration: none;
     }
-    
+    a{
+      text-align: none;
+    }
     </style>
     </head>
 <body>
@@ -298,8 +301,8 @@ footer {
         
         <div class="header-coluna-texto">
             <h1>Nosso Cardápio Surreal</h1>
-            <p>Cafés intensos, chás aromáticos e criações exclusivas. Beba devagar — o sonho não tem pressa.</p>
-            <button class="btn">Ver as Opções</button> </div>
+            <p>Cafés intensos, chás aromáticos e criações exclusivas. Beba devagar — o sonho não tem pressa.</p></a>
+            <a href="#menu"><button class="btn">Ver as Opções</button> </div>
             <br> <br>
             <div style="position: relative; left: 90px; top: 90px;"><img src="catheader1.png" alt=""></div>
             <div style="position:relative; left:105px; "><img src="catheader2.png" alt=""></div>
@@ -307,12 +310,12 @@ footer {
         </header>
         <br> <br>
         <div class="colunaprincipal">
-        <h1 style="color: rgba(255, 255, 255, 0.897); text-align:center; font-size: 50px;text-shadow: 0 0 20px rgba(255, 255, 255, 0.675);">Cardápio e Adoção: Nosso Universo</h1>
+        <h1 id="menu" style="color: rgba(255, 255, 255, 0.897); text-align:center; font-size: 50px;text-shadow: 0 0 20px rgba(255, 255, 255, 0.675);">Cardápio e Adoção: Nosso Universo</h1>
 
         <div class="container-conteudo-colunas">
             
             <div class="coluna">
-                <h3>☕ Cafés Sonhadores</h3>
+                <h3>☕ Cafés </h3>
                 <div class="item-menu">
                     <span>Expresso Onírico</span>
                     <span>R$ 5,00</span>
@@ -325,7 +328,7 @@ footer {
                 </div>
                 <p>Latte cremoso com xarope de baunilha e um toque de lavanda.</p>
                 
-                <h3>🍰 Doces Felinos</h3>
+                <h3>🍰 Doces </h3>
                 <div class="item-menu">
                     <span>Torta das Belas</span>
                     <span>R$ 10,99</span>
@@ -333,8 +336,6 @@ footer {
                 <p>Torta de limão com especiarias secretas.</p>
                 <a href="cardapio.html"><button class="btn-adotar">Explore as gostosuras do nosso cardápio</button></a>
             </div>
-            
-        
                 <img src="picturecat2.png" alt="">
             </div>
 
@@ -348,7 +349,7 @@ footer {
                 <h3>🐾 Encontre Seu Novo Amigo</h3>
                 <p>Todos os nossos gatos vêm de abrigos locais, onde aguardavam pacientemente por uma chance. Aqui, eles recebem amor, cuidados e um ambiente tranquilo antes de encontrarem seu lar eterno.</p>
                 <p>Ao adotar, você não apenas ganha um companheiro, mas também salva uma vida e apoia nossa missão.</p>
-                <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/adote.html"><button class="btn-adotar">Quero adotar um gato</button></a>
+                <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/adote.html"><button class="btn-adotar">Quero adotar um gatinho</button></a>
             </div>
         </div>
         </div>
