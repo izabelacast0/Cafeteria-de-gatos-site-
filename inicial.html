@@ -282,13 +282,13 @@ nav a {
   height: 100%;
   display:block;
   position: relative;
-  background-color: #837874;
+  background-color: #fff;
+  
   text-align:left;
 }
 
 .slider input { display: none; }
 
-/* Faixa dos slides */
 .slides {
   display: flex;
   width: 300%; 
@@ -297,12 +297,10 @@ nav a {
   animation: autoplay 12s infinite;
 }
 
-/* Controle manual */
 #s1:checked ~ .slides { transform: translateX(0%); animation:none; }
 #s2:checked ~ .slides { transform: translateX(-33.333%); animation:none; }
 #s3:checked ~ .slides { transform: translateX(-66.666%); animation:none; }
 
-/* Auto-slide */
 @keyframes autoplay {
   0%   { transform: translateX(0%); }
   33%  { transform: translateX(0%); }
@@ -377,15 +375,12 @@ nav a {
 .left { left: 20px; }
 .right { right: 20px; }
 
-/* SLIDE 1 */
 #s1:checked ~ .seta-1-prev { display:block; }
 #s1:checked ~ .seta-1-next { display:block; }
 
-/* SLIDE 2 */
 #s2:checked ~ .seta-2-prev { display:block; }
 #s2:checked ~ .seta-2-next { display:block; }
 
-/* SLIDE 3 */
 #s3:checked ~ .seta-3-prev { display:block; }
 #s3:checked ~ .seta-3-next { display:block; }
 
@@ -480,7 +475,7 @@ nav a {
         <p>Sim! O acesso aos gatinhos é livre, mas consumir algo ajuda a manter o bem-estar deles.</p>
       </div>
     </div>
-
+    
     <div class="pergunta">
       <input type="checkbox" id="p3" class="caixa-toggle">
       <label for="p3" class="texto-pergunta">Vocês têm opções veganas ou vegetarianas?</label>
@@ -503,6 +498,7 @@ nav a {
   </footer>
 </body>
 </html>
+
 
 
 
