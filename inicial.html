@@ -72,7 +72,11 @@
     body {
       font-family: 'Libre Baskerville', serif;
       background: linear-gradient(to bottom right, #f3ede4, #e0dcd5);
-      color: #1c1c1c;
+      display:block;
+      justify-content:center;
+      height:100vh;
+      margin:0;
+      color: #2e2320;
       overflow-x: hidden;
       transition: background 1s ease, color 0.8s ease;
     }
@@ -161,8 +165,6 @@
       color: #1c1c1c;
       transform: scale(1.05);
     }
-
-
     nav {
       position: absolute;
       top: 20px;
@@ -172,8 +174,6 @@
       gap: 30px;
       z-index: 22;
     }
-
-
     nav {
             position: absolute;
             top: 20px;
@@ -212,7 +212,7 @@ nav a {
 
     section {
       padding: 100px 10%;
-      text-align: center;
+      text-align: left;
     }
 
 
@@ -259,6 +259,137 @@ nav a {
       background: rgba(255, 255, 255, 0.4);
       color: #000;
     }
+    #slider{
+      display: flex;
+      justify-content: center; 
+      align-items: center;  
+      padding: 100px 0;        
+    }
+    .vinheta {
+    width: 65vw;
+    height: 85vh;
+    box-shadow: inset 0 0 120px rgba(34, 14, 14, 0.77);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .slider {
+  width: 100%;
+  height: 100%;
+  display:block;
+  position: relative;
+  background-color: #837874;
+  text-align:left;
+}
+
+.slider input { display: none; }
+
+/* Faixa dos slides */
+.slides {
+  display: flex;
+  width: 300%; 
+  height: 100%;
+  transition: transform 1s ease;
+  animation: autoplay 12s infinite;
+}
+
+/* Controle manual */
+#s1:checked ~ .slides { transform: translateX(0%); animation:none; }
+#s2:checked ~ .slides { transform: translateX(-33.333%); animation:none; }
+#s3:checked ~ .slides { transform: translateX(-66.666%); animation:none; }
+
+/* Auto-slide */
+@keyframes autoplay {
+  0%   { transform: translateX(0%); }
+  33%  { transform: translateX(0%); }
+  38%  { transform: translateX(-33.333%); }
+  66%  { transform: translateX(-33.333%); }
+  71%  { transform: translateX(-66.666%); }
+  99%  { transform: translateX(-66.666%); }
+  100% { transform: translateX(0%); }
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+  background: rgba(182, 178, 178, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+.slide img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.texto {
+  width: 55%;
+  color:#fff;
+  text-align: left;
+}
+
+.texto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: left;
+  margin:0;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-style: italic;
+  text-align: left;
+  margin:0;
+}
+
+.slide p{
+  color: #fff;
+}
+
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3.2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  padding: 5px 15px;
+  transition: 0.3s;
+}
+
+.seta:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* POSIÇÕES */
+.left { left: 20px; }
+.right { right: 20px; }
+
+/* SLIDE 1 */
+#s1:checked ~ .seta-1-prev { display:block; }
+#s1:checked ~ .seta-1-next { display:block; }
+
+/* SLIDE 2 */
+#s2:checked ~ .seta-2-prev { display:block; }
+#s2:checked ~ .seta-2-next { display:block; }
+
+/* SLIDE 3 */
+#s3:checked ~ .seta-3-prev { display:block; }
+#s3:checked ~ .seta-3-next { display:block; }
+
+.seta { display:none; }
   </style>
 </head>
 <body>
@@ -278,24 +409,59 @@ nav a {
   </header>
 
 
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>Um espaço onde o tempo desacelera, o café é arte e cada gato é uma história esperando um novo lar. Inspirados pela estética surrealista, criamos um refúgio para almas gentis e amantes de felinos.</p>
-  </section>
+  <section id="slider">
+    <div class="vinheta" style="align-items: center;">
+  <div class="slider">
 
+    <!-- Inputs -->
+    <input type="radio" name="s" id="s1" checked>
+    <input type="radio" name="s" id="s2">
+    <input type="radio" name="s" id="s3">
 
-  <section id="adote">
-    <h2>Adote um Gato</h2>
-    <p>Todos os nossos gatos vêm de abrigos locais. Aqui, eles encontram amor, descanso e talvez... você.</p>
-  </section>
+    <!-- Slides -->
+    <div class="slides">
 
+      <div class="slide">
+        <img src="m1.jpg">
+        <div class="texto">
+          <h1>Sobre nós</h1>
+          <p>Um espaço onde o tempo desacelera, o café é arte e cada gato é uma história esperando um novo lar. Inspirados pela estética surrealista, criamos um refúgio para almas gentis e amantes de felinos.</p>
+        </div>
+      </div>
 
-  <section id="menu">
-    <h2>Nosso Menu</h2>
-    <p>Cafés intensos, chás aromáticos e criações exclusivas que combinam sabor e serenidade. Beba devagar — o sonho não tem pressa.</p>
+      <div class="slide">
+        <img src="m1.jpg">
+        <div class="texto">
+          <h1>Adote um gato</h1>
+          <p>Todos os nossos gatos vêm de abrigos locais. Aqui, eles encontram amor, descanso e talvez... você.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="m2.jpg">
+        <div class="texto">
+          <h1>Nosso menu</h1>
+          <p>Cafés intensos, chás aromáticos e criações exclusivas que combinam sabor e serenidade. Beba devagar — o sonho não tem pressa.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- SLIDE 1 -->
+    <label for="s3" class="seta left seta-1-prev">&#10094;</label>
+    <label for="s2" class="seta right seta-1-next">&#10095;</label>
+
+    <!-- SLIDE 2 -->
+    <label for="s1" class="seta left seta-2-prev">&#10094;</label>
+    <label for="s3" class="seta right seta-2-next">&#10095;</label>
+
+    <!-- SLIDE 3 -->
+    <label for="s2" class="seta left seta-3-prev">&#10094;</label>
+    <label for="s1" class="seta right seta-3-next">&#10095;</label>
+  </div>
+</div>
   </section>
   <section id="faq">
-  <h2>Perguntas Frequentes</h2>
+  <h2 style="text-align: center;">Perguntas Frequentes</h2>
 
   <div class="faq-container">
 
@@ -330,7 +496,6 @@ nav a {
         <p>Sim! Eles circulam livremente, escolhendo onde querem descansar e brincar.</p>
       </div>
     </div>
-
   </div>
 </section>
   <footer>
@@ -338,6 +503,7 @@ nav a {
   </footer>
 </body>
 </html>
+
 
 
 
