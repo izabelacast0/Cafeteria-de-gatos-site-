@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="cafeteria, gatos, adoção">
+  <meta name="author" content="Isabela Martins, Geovana Gama, Maria Gabrielly, Izabela Castro">
+  <meta name="description" content="Miaulatte™ — um espaço artístico onde o aroma do café encontra o aconchego dos felinos. Conheça, adote e sonhe.">
+  <meta name="reply-to" content="contato@miaulatte.com.br">
+  <title>Cardápio | Miaulatte™</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Baskerville:ital@0;1&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Libre Baskerville', serif;
+      background: linear-gradient(to bottom right, #f3ede4, #e0dcd5);
+      color: #1c1c1c;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 50vh;
+      background: url("headermonet.jpeg") center/cover no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.2), rgba(0,0,0,0.7));
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      z-index: 1;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    p.sub {
+      z-index: 1;
+      font-size: 1.2rem;
+      color: #f3f3f3;
+      opacity: 0.9;
+      margin-top: 1rem;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+      z-index: 2;
+    }
+
+    nav a {
+      font-family: 'Cinzel', serif;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition:color 0.4s ease;
+    }
+
+    nav a:hover {
+      color: #392e2b;
+      text-shadow: 0 2px 8px rgba(32, 24, 24, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .container {
+      padding: 80px 10%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .gato-card {
+      background: #392e2b;
+      color: #ededed;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .gato-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+   .gato-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* mostra a imagem inteira */
+    object-position: center; /* centraliza */
+    background-color: #fff; /* cor neutra de fundo */
+    padding: 10px; /* espaço interno pra não colar na borda */
+}
+
+
+    .gato-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      margin-top: 15px;
+      color: #ededed;
+    }
+
+    .gato-card p {
+      font-size: 0.95rem;
+      color: #bebcbc;
+      padding: 0 15px 20px 15px;
+      margin-top: 10px;
+      font-style: italic;
+      text-align: left;
+    }
+    .preço{
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      margin-top: 15px;
+      color: #e6cbbe;
+      font-style: italic;
+      text-align: left;
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #ededed;
+      background-color: #392e2b;
+    }
+    
+     .adocao-info {
+      text-align: center;
+      padding: 80px 15%;
+      background: rgba(255,255,255,0.3);
+      border-top: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      backdrop-filter: blur(8px);
+    }
+     .adocao-info h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .adocao-info p {
+      font-size: 1rem;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+     .btn {
+      background: rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.2);
+      padding: 0.8rem 2rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: #1c1c1c;
+      letter-spacing: 1px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: rgba(0,0,0,0.15);
+    }
+
+    .menufix{
+      position: fixed;
+      align-items: center;
+      background: rgba(255,255,255,0.2); 
+      backdrop-filter: blur(15px);
+      width: 100%;
+      top:-23px;
+      padding-top: 28px;
+      padding-bottom: 10px;
+      z-index:99;
+      justify-content: center;
+      margin-top: 20px;
+      border-bottom: 1px solid #fff;
+    }
+    .galeria{
+        justify-content: center;
+        display: flex;
+    }
+    .galeria img{
+        width: 250px;
+        height: 250px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+    figcaption{
+        margin-left: 35px !important;
+    }
+    figcaption a{
+        position: relative;
+        text-decoration: none;
+        color: #3d5e4f;
+        font-family: 'Cinzel', serif;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    figcaption a::after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 3px;
+        left: 0;
+        bottom: -1px;
+        background-color:#3d5e4f;
+        transition: width 0.3s ease;
+    }
+
+    figcaption a:hover::after{
+        width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="menufix">
+      <a href="inicial.html">Início</a>
+      <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/empresa.html">Sobre</a>
+      <a href="adote.html">Adote</a>
+      <a href="menu.html">Menu</a>
+      <a href="https://izabelacast0.github.io/Cafeteria-de-gatos-site-/sobrenos.html">Quem somos</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <h1>Cardápio</h1>
+    <p class="sub"><i>Conheça sabores que abraçam.</i></p>
+  </header>
+  <div class="galeria">
+    <figure>
+    <img src="w4.png" alt="w4">
+    <figcaption><a href="bebidas.html">Bebidas</a></figcaption>
+    </figure>
+    <figure>
+    <img src="w2.png" alt="w2">
+    <figcaption><a href="bolos.html">Bolos</a></figcaption>
+    </figure>
+    <figure>
+    <img src="w3.png" alt="w3">
+    <figcaption><a href="paos.html">Pãos</a></figcaption>
+    </figure>
+    <figure>
+    <img src="w1.png" alt="w1">
+    <figcaption><a href="paragatos.html">para gatos</a></figcaption>
+    </figure>
+  </div>
+  <section class="container">
+    
+    <div class="gato-card">
+      <img src="pao1.jpg" alt="pao1">
+      <h3>Rajado</h3>
+      <p> Pão fofinho com massa amanteigada mesclada de baunilha com matcha e erva cidreira. Experimente com nosso Hot Cacao!</p>
+      <h3 class="preço" style="color: #ffead3;">R$ 2,99</h3>
+    </div>
+    <div class="gato-card">
+      <img src="pao2.jpg" alt="pao2">
+      <h3>Canela</h3>
+      <p>Pão fofinho de massa mesclada com banana, noz moscada, algumas uvas passas e canela.</p>
+      <h3 class="preço" style="color: #ffead3;">R$ 2,99</h3>
+    </div>
+    <div class="gato-card">
+      <img src="pao3.jpg" alt="pao3">
+      <h3>Frajola</h3>
+      <p>Pão fofinho feito com metade de massa de baunilha e a outra metade uma mistura de café e chocolate 60% cacau.</p>
+      <h3 class="preço" style="color: #ffead3;">R$ 2,99</h3>
+    </div>
+    <div class="gato-card">
+      <img src="pao4.jpg" alt="pao4">
+      <h3>Van Turco</h3>
+      <p>Pão fofinho feito de massa de leite e capuccino.</p>
+      <h3 class="preço" style="color: #ffead3;">R$ 2,99</h3>
+    </div>
+  </section>
+  <section class="adocao-info">
+    <h2>Compartilhe Sabores!</h2>
+    <p>A Miaulatte™ ainda está em fase de crescimento, então gostariamos de receber sugestões para inserirmos novas delícias em nosso cardápio. Lembrando que pode ser uma receita original, um título criativo ou um feedback nos dizendo a sua opinião sobre nosso café!</p> 
+    <a href="contato.html" class="btn">Entrar em Contato e Ler Políticas</a>
+  </section>
+
+  <footer>
+    © 2025 Café & Gatos — Adote um gatinho.
+  </footer>
+</body>
+</html>
