@@ -10,6 +10,57 @@
   <title> Inicial | Miaulatte™</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Baskerville:ital@0;1&display=swap');
+      .faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.pergunta {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #ccbfb3;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.caixa-toggle {
+  display: none;
+}
+
+.texto-pergunta {
+  display: block;
+  padding: 15px 18px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.texto-pergunta:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.texto-resposta {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid #ccbfb3;
+  transition: max-height 0.5s ease;
+  padding: 0 18px;
+}
+
+.texto-resposta p {
+  padding: 15px 0;
+  color: #392e2b;
+  line-height: 1.6;
+}
+
+.caixa-toggle:checked + .texto-pergunta + .texto-resposta {
+  max-height: 300px;
+}
 
     * {
       margin: 0;
@@ -243,15 +294,50 @@ nav a {
     <h2>Nosso Menu</h2>
     <p>Cafés intensos, chás aromáticos e criações exclusivas que combinam sabor e serenidade. Beba devagar — o sonho não tem pressa.</p>
   </section>
+  <section id="faq">
+  <h2>Perguntas Frequentes</h2>
 
+  <div class="faq-container">
 
+    <div class="pergunta">
+      <input type="checkbox" id="p1" class="caixa-toggle">
+      <label for="p1" class="texto-pergunta">Como funciona a adoção?</label>
+      <div class="texto-resposta">
+        <p>A adoção é feita em parceria com abrigos da região. Após escolher seu gatinho, nossa equipe ajuda com o formulário e acompanhamento inicial.</p>
+      </div>
+    </div>
+
+    <div class="pergunta">
+      <input type="checkbox" id="p2" class="caixa-toggle">
+      <label for="p2" class="texto-pergunta">Posso visitar os gatos sem consumir?</label>
+      <div class="texto-resposta">
+        <p>Sim! O acesso aos gatinhos é livre, mas consumir algo ajuda a manter o bem-estar deles.</p>
+      </div>
+    </div>
+
+    <div class="pergunta">
+      <input type="checkbox" id="p3" class="caixa-toggle">
+      <label for="p3" class="texto-pergunta">Vocês têm opções veganas ou vegetarianas?</label>
+      <div class="texto-resposta">
+        <p>Infelizmente não temos opções veganas, mas temos sobremesas, cafés e chás vegetarianos preparados com muito carinho.</p>
+      </div>
+    </div>
+
+    <div class="pergunta">
+      <input type="checkbox" id="p4" class="caixa-toggle">
+      <label for="p4" class="texto-pergunta">Os gatos ficam soltos?</label>
+      <div class="texto-resposta">
+        <p>Sim! Eles circulam livremente, escolhendo onde querem descansar e brincar.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
   <footer>
     © 2025 Miaulatte™ — Adote. Aprecie. Ame.
   </footer>
 </body>
 </html>
-
-
 
 
 
